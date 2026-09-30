@@ -1,0 +1,1 @@
+(()=>{let choice;try{choice=localStorage.getItem('lounge-theme');}catch{}document.documentElement.dataset.theme=choice==='dark'||choice==='light'?choice:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');})();

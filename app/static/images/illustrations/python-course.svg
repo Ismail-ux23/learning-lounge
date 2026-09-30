@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" fill="none" role="img"><title>Python course cover</title><desc>The blue and yellow Python logo alongside a short Python program on a dark charcoal background.</desc><defs><linearGradient id="cover-bg" x1="0" y1="0" x2="640" y2="330" gradientUnits="userSpaceOnUse"><stop stop-color="#24333d"/><stop offset="1" stop-color="#171f28"/></linearGradient><linearGradient id="cover-light" x1="0" y1="0" x2="265" y2="260" gradientUnits="userSpaceOnUse"><stop stop-color="#496571" stop-opacity=".5"/><stop offset="1" stop-color="#24333d" stop-opacity="0"/></linearGradient></defs><rect width="640" height="330" fill="url(#cover-bg)"/><path d="M0 0h280L132 330H0Z" fill="url(#cover-light)"/><path d="M284 0v330M316 0v330M348 0v330M380 0v330M412 0v330M444 0v330M476 0v330M508 0v330M540 0v330M572 0v330M604 0v330M636 0v330M280 35h360M280 67h360M280 99h360M280 131h360M280 163h360M280 195h360M280 227h360M280 259h360M280 291h360" stroke="#abc0cc" stroke-opacity=".035"/><rect x="39" y="35" width="193" height="234" rx="31" fill="#fff" fill-opacity=".025" stroke="#bacbd2" stroke-opacity=".14"/><ns0:svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" xmlns:ns4="http://creativecommons.org/ns#" xmlns:ns6="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" version="1.0" id="svg2" ns1:version="0.32" ns2:version="1.2.1 (9c6d41e410, 2022-07-14)" ns1:docname="python-logo-only.svg" width="151" height="183" ns2:export-filename="python-logo-only.png" ns2:export-xdpi="232.44" ns2:export-ydpi="232.44" x="61" y="56" viewBox="0 0 111.161356 134.668107">
+  <ns0:metadata id="metadata371">
+    <rdf:RDF>
+      <ns4:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </ns4:Work>
+    </rdf:RDF>
+  </ns0:metadata>
+  <ns1:namedview ns2:window-height="2080" ns2:window-width="1976" ns2:pageshadow="2" ns2:pageopacity="0.0" guidetolerance="10.0" gridtolerance="10.0" objecttolerance="10.0" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" id="base" ns2:zoom="2.1461642" ns2:cx="91.558698" ns2:cy="47.9926" ns2:window-x="1092" ns2:window-y="72" ns2:current-layer="svg2" width="210mm" height="40mm" units="mm" ns2:showpageshadow="2" ns2:pagecheckerboard="0" ns2:deskcolor="#d1d1d1" ns2:document-units="pt" showgrid="false" ns2:window-maximized="0" />
+  <ns0:defs id="defs4">
+    <ns0:linearGradient id="linearGradient2795">
+      <ns0:stop style="stop-color:#b8b8b8;stop-opacity:0.49803922;" offset="0" id="stop2797" />
+      <ns0:stop style="stop-color:#7f7f7f;stop-opacity:0;" offset="1" id="stop2799" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="linearGradient2787">
+      <ns0:stop style="stop-color:#7f7f7f;stop-opacity:0.5;" offset="0" id="stop2789" />
+      <ns0:stop style="stop-color:#7f7f7f;stop-opacity:0;" offset="1" id="stop2791" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="linearGradient3676">
+      <ns0:stop style="stop-color:#b2b2b2;stop-opacity:0.5;" offset="0" id="stop3678" />
+      <ns0:stop style="stop-color:#b3b3b3;stop-opacity:0;" offset="1" id="stop3680" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="linearGradient3236">
+      <ns0:stop style="stop-color:#f4f4f4;stop-opacity:1" offset="0" id="stop3244" />
+      <ns0:stop style="stop-color:white;stop-opacity:1" offset="1" id="stop3240" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="linearGradient4671">
+      <ns0:stop style="stop-color:#ffd43b;stop-opacity:1;" offset="0" id="stop4673" />
+      <ns0:stop style="stop-color:#ffe873;stop-opacity:1" offset="1" id="stop4675" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="linearGradient4689">
+      <ns0:stop style="stop-color:#5a9fd4;stop-opacity:1;" offset="0" id="stop4691" />
+      <ns0:stop style="stop-color:#306998;stop-opacity:1;" offset="1" id="stop4693" />
+    </ns0:linearGradient>
+    <ns0:linearGradient x1="224.23996" y1="144.75717" x2="-65.308502" y2="144.75717" id="linearGradient2987" ns6:href="#linearGradient4671" gradientUnits="userSpaceOnUse" gradientTransform="translate(100.2702,99.61116)" />
+    <ns0:linearGradient x1="172.94208" y1="77.475983" x2="26.670298" y2="76.313133" id="linearGradient2990" ns6:href="#linearGradient4689" gradientUnits="userSpaceOnUse" gradientTransform="translate(100.2702,99.61116)" />
+    <ns0:linearGradient ns2:collect="always" ns6:href="#linearGradient4689" id="linearGradient2587" gradientUnits="userSpaceOnUse" gradientTransform="translate(100.2702,99.61116)" x1="172.94208" y1="77.475983" x2="26.670298" y2="76.313133" />
+    <ns0:linearGradient ns2:collect="always" ns6:href="#linearGradient4671" id="linearGradient2589" gradientUnits="userSpaceOnUse" gradientTransform="translate(100.2702,99.61116)" x1="224.23996" y1="144.75717" x2="-65.308502" y2="144.75717" />
+    <ns0:linearGradient ns2:collect="always" ns6:href="#linearGradient4689" id="linearGradient2248" gradientUnits="userSpaceOnUse" gradientTransform="translate(100.2702,99.61116)" x1="172.94208" y1="77.475983" x2="26.670298" y2="76.313133" />
+    <ns0:linearGradient ns2:collect="always" ns6:href="#linearGradient4671" id="linearGradient2250" gradientUnits="userSpaceOnUse" gradientTransform="translate(100.2702,99.61116)" x1="224.23996" y1="144.75717" x2="-65.308502" y2="144.75717" />
+    <ns0:linearGradient ns2:collect="always" ns6:href="#linearGradient4671" id="linearGradient2255" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.562541,0,0,0.567972,-11.5974,-7.60954)" x1="224.23996" y1="144.75717" x2="-65.308502" y2="144.75717" />
+    <ns0:linearGradient ns2:collect="always" ns6:href="#linearGradient4689" id="linearGradient2258" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.562541,0,0,0.567972,-11.5974,-7.60954)" x1="172.94208" y1="76.176224" x2="26.670298" y2="76.313133" />
+    <ns0:radialGradient ns2:collect="always" ns6:href="#linearGradient2795" id="radialGradient2801" cx="61.518883" cy="132.28575" fx="61.518883" fy="132.28575" r="29.036913" gradientTransform="matrix(1,0,0,0.177966,0,108.7434)" gradientUnits="userSpaceOnUse" />
+    <ns0:linearGradient ns2:collect="always" ns6:href="#linearGradient4671" id="linearGradient1475" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.562541,0,0,0.567972,-14.99112,-11.702371)" x1="150.96111" y1="192.35176" x2="112.03144" y2="137.27299" />
+    <ns0:linearGradient ns2:collect="always" ns6:href="#linearGradient4689" id="linearGradient1478" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.562541,0,0,0.567972,-14.99112,-11.702371)" x1="26.648937" y1="20.603781" x2="135.66525" y2="114.39767" />
+    <ns0:radialGradient ns2:collect="always" ns6:href="#linearGradient2795" id="radialGradient1480" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.7490565e-8,-0.23994696,1.054668,3.7915457e-7,-83.7008,142.46201)" cx="61.518883" cy="132.28575" fx="61.518883" fy="132.28575" r="29.036913" />
+  </ns0:defs>
+  <ns0:path style="fill:url(#linearGradient1478);fill-opacity:1" d="M 54.918785,9.1927421e-4 C 50.335132,0.02221727 45.957846,0.41313697 42.106285,1.0946693 30.760069,3.0991731 28.700036,7.2947714 28.700035,15.032169 v 10.21875 h 26.8125 v 3.40625 h -26.8125 -10.0625 c -7.792459,0 -14.6157588,4.683717 -16.7499998,13.59375 -2.46181998,10.212966 -2.57101508,16.586023 0,27.25 1.9059283,7.937852 6.4575432,13.593748 14.2499998,13.59375 h 9.21875 v -12.25 c 0,-8.849902 7.657144,-16.656248 16.75,-16.65625 h 26.78125 c 7.454951,0 13.406253,-6.138164 13.40625,-13.625 v -25.53125 c 0,-7.2663386 -6.12998,-12.7247771 -13.40625,-13.9374997 C 64.281548,0.32794397 59.502438,-0.02037903 54.918785,9.1927421e-4 Z m -14.5,8.21875012579 c 2.769547,0 5.03125,2.2986456 5.03125,5.1249996 -2e-6,2.816336 -2.261703,5.09375 -5.03125,5.09375 -2.779476,-1e-6 -5.03125,-2.277415 -5.03125,-5.09375 -10e-7,-2.826353 2.251774,-5.1249996 5.03125,-5.1249996 z" id="path1948" />
+  <ns0:path style="fill:url(#linearGradient1475);fill-opacity:1" d="m 85.637535,28.657169 v 11.90625 c 0,9.230755 -7.825895,16.999999 -16.75,17 h -26.78125 c -7.335833,0 -13.406249,6.278483 -13.40625,13.625 v 25.531247 c 0,7.266344 6.318588,11.540324 13.40625,13.625004 8.487331,2.49561 16.626237,2.94663 26.78125,0 6.750155,-1.95439 13.406253,-5.88761 13.40625,-13.625004 V 86.500919 h -26.78125 v -3.40625 h 26.78125 13.406254 c 7.792461,0 10.696251,-5.435408 13.406241,-13.59375 2.79933,-8.398886 2.68022,-16.475776 0,-27.25 -1.92578,-7.757441 -5.60387,-13.59375 -13.406241,-13.59375 z m -15.0625,64.65625 c 2.779478,3e-6 5.03125,2.277417 5.03125,5.093747 -2e-6,2.826354 -2.251775,5.125004 -5.03125,5.125004 -2.76955,0 -5.03125,-2.29865 -5.03125,-5.125004 2e-6,-2.81633 2.261697,-5.093747 5.03125,-5.093747 z" id="path1950" />
+  <ns0:ellipse style="opacity:0.44382;fill:url(#radialGradient1480);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15.4174;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path1894" cx="55.816761" cy="127.70079" rx="35.930977" ry="6.9673119" />
+</ns0:svg><g font-family="Arial, Helvetica, sans-serif"><text x="282" y="79" fill="#c9b894" font-size="13" letter-spacing="3">A WORLD OF POSSIBILITIES</text><text x="279" y="146" fill="#f6f4ef" font-size="57" font-weight="600" letter-spacing="-2">Python.</text><text x="283" y="177" fill="#a7bac2" font-size="17">Start small. Build something real.</text></g><rect x="281" y="205" width="309" height="65" rx="12" fill="#111b22" stroke="#42525c" stroke-opacity=".6"/><g font-family="monospace" font-size="16"><text x="300" y="234" fill="#82b6cf">print<tspan fill="#b8c5cd">(</tspan><tspan fill="#edca78">"Hello, world!"</tspan><tspan fill="#b8c5cd">)</tspan></text><text x="300" y="254" fill="#7c929e" font-size="12">Your first line is just the beginning.</text></g></svg>

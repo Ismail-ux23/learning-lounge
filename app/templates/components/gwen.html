@@ -1,0 +1,3 @@
+{% macro gwen(pose='welcome', message='', size='compact') -%}
+<div class="gwen-guide {{ size }}"><img src="{{ url_for('static',filename='images/gwen/gwen.png') }}" alt="Gwen, your learning guide" width="150" height="164">{% if message %}<div class="gwen-message"><span>GWEN’S NOTE</span><p>{{ message }}</p></div>{% endif %}</div>
+{%- endmacro %}

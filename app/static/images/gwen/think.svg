@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 370 455" fill="none"><title>Gwen — think</title><defs><linearGradient id="skin" x1="132" y1="74" x2="202" y2="170" gradientUnits="userSpaceOnUse"><stop stop-color="#f5d5bd"/><stop offset="1" stop-color="#e7ae92"/></linearGradient><linearGradient id="hair" x1="113" y1="48" x2="233" y2="258" gradientUnits="userSpaceOnUse"><stop stop-color="#503b43"/><stop offset=".5" stop-color="#392d3b"/><stop offset="1" stop-color="#614752"/></linearGradient><linearGradient id="knit" x1="118" y1="200" x2="220" y2="324" gradientUnits="userSpaceOnUse"><stop stop-color="#b7b0d2"/><stop offset="1" stop-color="#8e84ad"/></linearGradient><linearGradient id="pants" x1="142" y1="305" x2="210" y2="410" gradientUnits="userSpaceOnUse"><stop stop-color="#404451"/><stop offset="1" stop-color="#282f3a"/></linearGradient></defs>
+<ellipse cx="176" cy="431" rx="101" ry="11" fill="#7d788f" opacity=".12"/>
+<path d="M139 305 L127 414 Q138 424 156 415 L175 337 L190 416 Q207 425 220 413 L214 302Z" fill="url(#pants)"/><path d="M133 406 L153 408 L154 430 L113 430 Q108 420 133 406ZM191 408 L214 406 Q236 414 234 430 L191 430Z" fill="#f4eee3" stroke="#d0c6bb" stroke-width="1.5"/><path d="M116 430h38m38 0h40" stroke="#b8b0a8" stroke-width="3"/>
+<path d="M119 114 Q92 56 140 36 Q180 20 210 42 Q242 55 232 107 L242 214 Q249 260 216 277 L114 270 Q95 251 106 204Z" fill="url(#hair)"/>
+<path d="M126 228 Q96 225 108 195 L138 166" stroke="url(#knit)" stroke-width="28" stroke-linecap="round"/><path d="M130 176 Q136 161 151 157 L157 141 Q163 137 165 145 L161 164 Q160 181 146 186Z" fill="url(#skin)"/>
+<path d="M142 196 Q172 185 199 196 Q217 202 225 227 L234 314 Q175 335 112 313 L118 230 Q119 205 142 196Z" fill="url(#knit)"/>
+<path d="M151 192 L151 166 L192 167 L194 192 Q180 212 151 192Z" fill="url(#skin)"/>
+<path d="M151 187 Q173 204 194 187 L200 206 Q172 221 147 204Z" fill="#ded8e9"/>
+<path d="M154 210 Q176 219 197 207 M123 305 Q175 322 228 308" stroke="#c8c0dd" stroke-width="3"/>
+<path d="M218 225 Q240 239 231 277 L214 296" stroke="url(#knit)" stroke-width="28" stroke-linecap="round"/>
+<path d="M136 75 Q169 55 207 80 L211 121 Q208 160 181 177 Q148 174 137 141Z" fill="url(#skin)"/>
+<ellipse cx="135" cy="117" rx="8" ry="12" fill="#ebbaa2"/><ellipse cx="211" cy="118" rx="7" ry="12" fill="#ebbaa2"/>
+<path d="M128 124 Q118 74 153 58 Q165 49 180 55 Q164 82 141 89 L137 137 L141 199 Q144 240 125 258 Q111 237 117 195Z" fill="url(#hair)"/>
+<path d="M176 54 Q197 39 217 65 Q230 87 216 135 L219 192 Q233 227 211 259 Q205 219 197 188 L205 126 L204 95 Q185 83 176 54Z" fill="url(#hair)"/>
+<path d="M141 64 Q117 103 125 151 L128 197 Q138 237 122 250 M213 81 Q220 108 210 151 L212 204 Q222 232 214 244" stroke="#795c65" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+<path d="M146 107 Q155 102 163 106 M184 105 Q194 100 202 106" stroke="#5f4145" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M148 118 Q154 113 161 118 M184 117 Q191 112 198 117" stroke="#47353c" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="155" cy="119" rx="3.2" ry="4.6" fill="#47353c"/><ellipse cx="192" cy="118" rx="3.2" ry="4.6" fill="#47353c"/><circle cx="156" cy="118" r="1.1" fill="#fff"/><circle cx="193" cy="117" r="1.1" fill="#fff"/>
+<path d="M175 119 L171 133 Q175 137 180 132" stroke="#cd967f" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="149" cy="134" rx="8" ry="4" fill="#d78f8d" opacity=".26"/><ellipse cx="199" cy="132" rx="7" ry="3.5" fill="#d78f8d" opacity=".26"/><path d="M166 144 Q180 153 192 141" stroke="#aa6563" stroke-width="2.7" stroke-linecap="round"/>
+<circle cx="134" cy="133" r="3" fill="#d8bb80"/>
+<g transform="rotate(10 235 272)"><rect x="204" y="224" width="62" height="94" rx="7" fill="#708b80"/><rect x="210" y="227" width="54" height="87" rx="4" fill="#d9e4db"/><path d="M213 244h38m-38 9h28m-28 9h32" stroke="#95ada0" stroke-width="3" stroke-linecap="round"/><path d="M245 224v23l-5-4-5 4v-23" fill="#d1b48c"/></g>
+<path d="M219 287 Q205 277 201 285 Q195 296 208 302 L227 302 Q234 294 226 289Z" fill="url(#skin)"/>
+</svg>

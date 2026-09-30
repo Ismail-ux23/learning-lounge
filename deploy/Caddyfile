@@ -1,0 +1,5 @@
+# Replace with your domain. Keep Gunicorn bound to localhost.
+learning.example.com {
+    reverse_proxy 127.0.0.1:5066
+    header Strict-Transport-Security "max-age=31536000; includeSubDomains"
+}

@@ -1,0 +1,53 @@
+services:
+  web:
+    build: .
+    ports: ["127.0.0.1:5066:5066"]
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://lounge:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@db/lounge
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      db: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    restart: unless-stopped
+  worker:
+    build: .
+    command: celery -A app.tasks.celery worker --loglevel=INFO
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://lounge:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@db/lounge
+      REDIS_URL: redis://redis:6379/0
+    depends_on: [db, redis]
+    restart: unless-stopped
+  beat:
+    build: .
+    command: celery -A app.tasks.celery beat --loglevel=INFO --schedule=/tmp/celerybeat
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://lounge:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@db/lounge
+      REDIS_URL: redis://redis:6379/0
+    depends_on: [db, redis]
+    restart: unless-stopped
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: lounge
+      POSTGRES_USER: lounge
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    volumes: ["database:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lounge"]
+      interval: 5s
+      retries: 10
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 10
+  mailpit:
+    image: axllent/mailpit:v1.27
+    profiles: [dev-mail]
+    ports: ["127.0.0.1:1025:1025", "127.0.0.1:8025:8025"]
+volumes:
+  database:

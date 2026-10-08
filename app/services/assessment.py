@@ -9,7 +9,10 @@ from app.services.runner import run, RunnerUnavailable
 def assemble(user,course,mode,categories,count,topic_id=None,difficulty='beginner',timed=True):
     if mode not in ('practice','exam','placement','daily','final'): raise ValueError('Invalid mode')
     if not 1<=count<=30: raise ValueError('Choose 1–30 questions')
-    if not categories or not set(categories)<= {'concept','error','output','code'}: raise ValueError('Select valid categories')
+    if (not isinstance(categories,list) or not categories
+        or any(not isinstance(c,str) or c not in {'concept','error','output','code'} for c in categories)
+        or len(categories)!=len(set(categories))):
+        raise ValueError('Select unique valid categories')
     daily_key=None
     if mode=='daily':
         day=now().replace(tzinfo=ZoneInfo('UTC')).astimezone(ZoneInfo(user.timezone)).date().isoformat()
@@ -30,10 +33,28 @@ def assemble(user,course,mode,categories,count,topic_id=None,difficulty='beginne
     if count<len(categories): raise ValueError('Question count must cover each selected category')
     rng=random.Random(f'{course.id}:{day}') if mode=='daily' else random.SystemRandom()
     selected=[]
+    if mode=='final':
+        # At most four categories: track category coverage while picking one
+        # question per topic. This avoids wasting slots on repeated categories
+        # when a different choice would cover the syllabus within the limit.
+        bits={category:1<<i for i,category in enumerate(categories)}
+        choices={0:[]}
+        for topic in sorted(expected):
+            candidates=[q for q in pool if q.topic_id==topic]
+            rng.shuffle(candidates)
+            next_choices={}
+            for mask,questions in choices.items():
+                for q in candidates:
+                    next_choices.setdefault(mask|bits[q.category],questions+[q])
+            choices=next_choices
+        selected=max(choices.items(),key=lambda item:item[0].bit_count())[1]
     for category in categories:
+        if any(q.category==category for q in selected): continue
         matching=[q for q in pool if q.category==category]
         if not matching: raise ValueError('No reviewed questions for '+category)
         selected.append(rng.choice(matching))
+    if len(selected)>count:
+        raise ValueError('Increase the question count to cover every syllabus topic and selected category')
     selected+=rng.sample([q for q in pool if q not in selected],count-len(selected))
     rng.shuffle(selected)
     rules=copy.deepcopy(course.rules)

@@ -210,6 +210,16 @@ Run the automated tests with:
 
 Tests cover important platform behavior including authentication, enrollment, lesson persistence, assessments, autosave, deadlines, scoring, certificates, CSRF protection, AI response validation, and grading failures.
 
+Final assessments include every syllabus topic and each selected question category. If the requested count cannot cover both, the application asks for more questions instead of silently leaving gaps.
+
+The `Tests` GitHub Actions workflow runs the regression suite and a fresh-database migration/seed smoke check on Python 3.12 and 3.14 for pushes and pull requests. AI calls are mocked in tests; live Gemini/Ollama, Judge0, PostgreSQL, and Redis integrations require separate verification.
+
+## Contributing
+
+Install `requirements-dev.txt` and run `python -m pytest -q` before opening a pull request. For a bug report, include the steps to reproduce, expected and actual behavior, and your Python version. Remove passwords, API keys, and personal data from logs.
+
+Keep pull requests focused on a specific fix or feature. Add a regression test when changing assessment selection, grading, deadlines, authorization, or certificate behavior. New question-bank material should include an explanation and be reviewed before approval.
+
 ## 🐳 Docker Support
 
 The project includes:

@@ -1,0 +1,37 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.14']
+    env:
+      SECRET_KEY: ci-only-not-a-production-secret
+      DATABASE_URL: sqlite:///ci.db
+      AI_MODEL: ''
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Run regression tests
+        run: python -m pytest -q
+      - name: Verify a fresh database and curriculum
+        run: |
+          python -m flask --app run db upgrade
+          python -m flask --app run seed
+          python -m flask --app run seed
+          python -c "from app import create_app; app = create_app(); response = app.test_client().get('/'); assert response.status_code == 200, response.status_code"

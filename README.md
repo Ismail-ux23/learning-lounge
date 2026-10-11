@@ -17,9 +17,16 @@ and does not require paid AI credentials, Redis, or a code runner.
 | Learner dashboard and admin content management | SMTP for password-reset email delivery |
 | Certificate verification and assessment history | Redis and Celery for background jobs and periodic processing |
 
-Assessment availability depends on approved questions covering the chosen
-topics and categories. The seed contains introductory examples, not a
-complete final-assessment question bank for all 29 lessons.
+The seed includes 76 approved objective questions: the original 12 plus
+64 authored questions covering all 29 lessons. Each lesson has concept and
+output coverage. A full-course final supports 29–30 questions with concept,
+output, or a mixture of concept/output/error categories. An error-only final
+is unavailable because error questions do not cover every topic.
+
+After updating an existing installation, run `flask --app run seed` to add
+the new bank. Repeated seeding preserves existing question edits and review
+states. See [question-bank notes](docs/QUESTION_BANK.md) for coverage and
+validation details.
 
 ## ✨ Key Features
 

@@ -5,7 +5,10 @@ from data.curriculum import LESSONS
 
 def seed_database():
     seed_resources()
-    if Course.query.filter_by(slug='python-foundations').first(): return
+    existing = Course.query.filter_by(slug='python-foundations').first()
+    if existing:
+        seed_foundations_bank(existing)
+        return
     course=Course(title='Python, from the ground up',slug='python-foundations',description='Build a strong foundation, solve real problems, and find your next step. 29 practical lessons, from your first line to data and AI.',objectives='Read and write Python confidently. Design small programs. Test your work. Explore specialist fields.',status='published',version='2026.1 · Python 3.14',reviewed='2026-09-29',references='https://docs.python.org/3.14/tutorial/',level='Beginner to intermediate')
     db.session.add(course); db.session.flush()
     course.rules={**course.rules,'artwork':'python-course'}
@@ -36,6 +39,7 @@ def seed_database():
     content=dict(prompt=prompt,category='code',difficulty='beginner',code='# Read two integers and print their sum\n',options=[],correct=None,explanation='Split the input, convert both values to integers, and add them. Any implementation satisfying the input/output contract earns credit.',tests=[{'stdin':'2 3\n','expected':'5\n','weight':1,'visible':True},{'stdin':'-5 5\n','expected':'0\n','weight':2,'visible':False},{'stdin':'1000 -2\n','expected':'998\n','weight':2,'visible':False}],reference='a, b = map(int, input().split())\nprint(a + b)',runtime='Python 3.14')
     db.session.add(Question(course_id=course.id,topic_id=topics[2].id,state='draft',category='code',difficulty='beginner',content=content,fingerprint=hashlib.sha256(prompt.encode()).hexdigest()))
     db.session.commit()
+    seed_foundations_bank(course)
 
 def seed_resources():
     for name,slug in [('Programming languages','language'),('Frameworks','framework'),('Libraries','library'),('Databases','database'),('Technical subjects','technical')]:
@@ -47,4 +51,35 @@ def seed_resources():
         ('Flask documentation','Explore routes, templates, application structure, and web-development fundamentals.','https://flask.palletsprojects.com/en/stable/','Web development')]
     for i,(title,description,url,category) in enumerate(resources):
         if not Resource.query.filter_by(url=url).first(): db.session.add(Resource(title=title,description=description,url=url,category=category,status='published',position=i))
+    db.session.commit()
+
+
+def seed_foundations_bank(course):
+    """Add missing reviewed content without resetting existing admin edits."""
+    from app.ai.schemas import QuestionData
+    from data.question_bank import bank_entries
+
+    topics = Topic.query.join(Module).filter(Module.course_id == course.id).all()
+    grouped = {}
+    for topic in topics:
+        grouped.setdefault(topic.title, []).append(topic)
+    additions = []
+    for key, title, content in bank_entries():
+        fingerprint = hashlib.sha256(
+            f'python-foundations:{key}'.encode('utf-8')
+        ).hexdigest()
+        if Question.query.filter_by(fingerprint=fingerprint).first():
+            continue
+        matches = grouped.get(title, [])
+        if len(matches) != 1:
+            raise ValueError(
+                f'Cannot seed question bank: expected one syllabus topic named {title!r}'
+            )
+        QuestionData.model_validate(content)
+        additions.append(Question(
+            course_id=course.id, topic_id=matches[0].id, state='approved',
+            category=content['category'], difficulty=content['difficulty'],
+            content=content, fingerprint=fingerprint,
+        ))
+    db.session.add_all(additions)
     db.session.commit()

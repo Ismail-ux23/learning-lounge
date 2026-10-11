@@ -4,6 +4,23 @@
 
 The platform is designed with a modular architecture so additional courses, programming languages, frameworks, and learning categories can be added in the future.
 
+## Try the project
+
+Start with the [local installation](#-local-installation) below, then follow
+[the demo walkthrough](docs/DEMO.md). The basic learner flow uses SQLite
+and does not require paid AI credentials, Redis, or a code runner.
+
+| Available locally | Needs an additional service |
+| --- | --- |
+| Registration, enrollment, 29 lessons, saved progress | Gemini or Ollama for AI generation and analysis |
+| Objective practice and assessments from approved questions | A trusted Judge0 service for executing coding answers |
+| Learner dashboard and admin content management | SMTP for password-reset email delivery |
+| Certificate verification and assessment history | Redis and Celery for background jobs and periodic processing |
+
+Assessment availability depends on approved questions covering the chosen
+topics and categories. The seed contains introductory examples, not a
+complete final-assessment question bank for all 29 lessons.
+
 ## ✨ Key Features
 
 - User registration and secure authentication
@@ -151,6 +168,7 @@ Clone the repository:
 
 Create a virtual environment:
 
+    # Python 3.12 or 3.14 (tested in CI)
     python3 -m venv .venv
 
 Activate it:
@@ -165,9 +183,15 @@ Install dependencies:
 
 Create your environment configuration:
 
-    cp .env.example .env
+    cp .env.local.example .env
 
-Set a secure `SECRET_KEY` inside `.env`.
+This local preset uses SQLite and process-local rate limits. With an empty
+`SECRET_KEY`, the application creates a persistent private development key
+in `instance/session.key`. Keep `instance/` and `.env` out of version control.
+For deployment, use `.env.example` as a starting point and set a random
+`SECRET_KEY`, a real Redis URL, and the other services you intend to use.
+
+If you already have `.env`, update its values rather than overwriting it.
 
 Run database migrations:
 
@@ -177,7 +201,7 @@ Seed the initial learning content:
 
     flask --app run seed
 
-Create an administrator:
+Create an administrator (optional for the learner demo):
 
     flask --app run create-admin
 
@@ -188,6 +212,21 @@ Start the application:
 Then open:
 
     http://localhost:5066
+
+For Windows PowerShell, replace `source .venv/bin/activate` with
+`.venv\Scripts\Activate.ps1` and use `Copy-Item .env.local.example .env`.
+
+Troubleshooting:
+
+- **Redis connection refused:** use `REDIS_URL=memory://` for this local
+  preset, or start the Redis service for the full stack. Process-local
+  limits do not provide shared limits across multiple workers.
+- **No such table:** run `flask --app run db upgrade` before opening the app.
+- **No courses:** run `flask --app run seed`.
+- **Insufficient assessment coverage:** use a topic with approved questions,
+  or review and approve more questions through the admin workflow.
+- **AI or coding unavailable:** configure the corresponding service; these
+  features are not required to browse lessons and save progress.
 
 ## 🔐 Environment Variables
 

@@ -11,8 +11,10 @@ This is a local walkthrough; no public hosted demo is currently linked.
 4. Enroll in the course and open the first lesson.
 5. Read the explanation, inspect the code example, and complete the lesson.
 6. Open the dashboard to see saved progress. Reopen the course to continue.
-7. Explore practice using topics with approved questions. Review mistakes
-   and result history after completing an available assessment.
+7. Explore practice, then select **Final assessment**, **Mixed topics**, and
+   **29** or **30** questions at beginner difficulty. Keep concept/output
+   selected (error questions can be included). Review the result and mistakes.
+   All 29 syllabus topics are covered before the final starts.
 
 For a portfolio presentation, show the syllabus, a lesson, saved progress,
 and an assessment result using your own sample account. Use sample data;
@@ -33,9 +35,10 @@ AI-generated questions require review before entering the approved bank.
   require an email service.
 - The local walkthrough does not start Celery workers or periodic tasks.
   Use the configured full stack for background processing.
-- Final assessments must cover every syllabus topic and selected category.
-  The introductory seed bank is too small for a full-course final; add
-  reviewed questions before showcasing that flow.
+- Final assessments cover every syllabus topic and selected category.
+  The objective seed supports 29–30 question finals with concept/output
+  coverage. Error-only or coding-only finals still require broader content;
+  coding also requires the configured runner.
 
 Certificates reflect this application's assessment rules, not external
 accreditation. Deployment and live integrations need separate verification.
